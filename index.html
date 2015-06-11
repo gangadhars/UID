@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://ironsummitmedia.github.io/startbootstrap-bare/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IoT Dashboard</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="http://ironsummitmedia.github.io/startbootstrap-bare/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="lib/font-mfizz/font-mfizz-1.2/font-mfizz.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/berryclip.css" rel="stylesheet">
+    <link href="css/dashbord.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css"></style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">IoT Dashboard</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li id='aj'>
+                        <a href="#aj">Alljoyn</a>
+                    </li>
+                    <li id='iotivity'>
+                        <a href="#iotivity">IoTivity</a>
+                    </li>
+                    <li id='nest'>
+                        <a href="#nest">Nest</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <div class="simulator">
+        <i class="fa fa-cog fa-lg"></i>
+        <div class="opts">
+            <ul>
+                <li id="add_device">Add a Device</li>
+                <li id="remove_device">Remove All</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <!-- Page Content -->
+    <div class="container" id = "AJ">
+        <div class="row">
+            <div class="iot content">Main Page
+            </div>
+            <div class="aj content">
+                
+                
+            </div>
+            <div class="iotivity content">
+            </div>
+            <div class="nest content">
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <script>
+        $(document).ready(function(){
+            var berry_clip = '<div class="col-md-3 grid-stack-item-content"> <div class="board"> <div class="div1"> <div class="div1-ele img"> <div class="div1-ele-p"> <i class="icon-raspberrypi rpi"></i> <h4>RPi MS100A</h4> </div> <div class="res div1-ele-p"> <i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> </div> </div> <div class="div1-ele buzzer"> <div class="buzzer-img buzzer-part"> <div class="main-buzzer">Buzzer</div> </div> <div class="buzzer-else buzzer-part"> <div class="white-space buzzer-else-part"> </div> <div class="buzzer-main-else buzzer-else-part"> <div class="resis inner"> <i class="fa fa-ellipsis-h"></i> </div> <div class="push-button inner"> <button><i class="fa fa-circle"></i></button> </div> <div class="resis inner"> <i class="fa fa-ellipsis-h" style="margin-top:20px"></i> <i class="fa fa-ellipsis-h"></i> </div> </div> </div> </div> </div> <div class="div2"> <div class="div2-ele led-cont"> <ul> <li><p>LED6</p><span class="red-led led"></span></li> <li><p>LED5</p><span class="red-led led"></span></li> <li><p>LED4</p><span class="yellow-led led"></span></li> <li><p>LED3</p><span class="yellow-led led"></span></li> <li><p>LED2</p><span class="green-led led"></span></li> <li><p>LED1</p><span class="green-led led"></span></li> </ul> </div> <div class="dev2-ele nodes"> <div class="apart"> <div class="apart-div"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div> <div class="apart-div"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div> </div> </div> </div> </div> </div>';
+            var page_content = 'iot';
+            var menu = 'iot';
+            
+            var num_of_devs = {
+                aj: 0, iotivity: 0, nest: 0
+            }
+            
+            /* Simulator */
+            $('.opts').hide();
+            $('.simulator i').click(function(){
+                $('.opts').toggle();    
+            });
+            $('#add_device').click(function(){
+                if(menu === 'iot')  {
+                    $('.iot').append(generate_error("Please select a tab"));
+                    return;
+                } else if(menu === 'nest') {
+                    if(num_of_devs['nest'] === 0)
+                        $('.content.nest').empty();
+                    //console.log("Going to add new device");
+                    $('.content.nest').append(berry_clip);
+                    num_of_devs['nest'] = num_of_devs['nest'] + 1;
+                }
+                else if(menu === 'iotivity') {
+                    if(num_of_devs['iotivity'] === 0)
+                        $('.content.iotivity').empty();
+                    $('.content.iotivity').append(berry_clip);
+                    num_of_devs['iotivity'] = num_of_devs['iotivity'] + 1;
+                }
+                else if(menu === 'aj') {
+                    if(num_of_devs['aj'] === 0)
+                        $('.content.aj').empty();
+                    $('.content.aj').append(berry_clip);
+                    num_of_devs['aj'] = num_of_devs['aj'] + 1;
+                }
+            });
+            $('#remove_device').click(function(){
+                if(menu === 'iot')  {
+                    $('.iot').empty();
+                    $('.content.iot').append("Main Page");
+                } else if(menu === 'nest') {
+                    $('.content.nest').empty();
+                    $('.content.nest').append(generate_error("No devices found"));
+                    num_of_devs['nest'] = 0;
+                }
+                else if(menu === 'iotivity') {
+                    $('.content.iotivity').empty();
+                    $('.content.iotivity').append(generate_error("No devices found"));
+                    num_of_devs['iotivity'] = 0;
+                }
+                else if(menu === 'aj') {
+                    $('.content.aj').empty();
+                    $('.content.aj').append(generate_error("No devices found"));
+                    num_of_devs['aj'] = 0;
+                }
+            });
+            
+            
+            
+            /* menu bar */
+            $('.content').hide();
+            $('.'+page_content).show();
+
+            $('.navbar-brand').click(function(){
+                
+                $('.'+page_content).hide();
+                $('#'+menu).removeClass('active');
+                $(this).addClass('active');
+                page_content = menu ='iot';
+                $('.'+page_content).show();
+                $('.content.iot').empty();
+                $('.content.iot').append('Main Page');
+            });
+            $('#nest').click(function(){
+                $('.'+page_content).hide();
+                $('#'+menu).removeClass('active');
+                $(this).addClass('active');
+                page_content = menu ='nest';
+                $('.'+page_content).show();
+            });
+            $('#iotivity').click(function(){
+                $('.'+page_content).hide();
+                $('#'+menu).removeClass('active');
+                $(this).addClass('active');
+                page_content = menu ='iotivity';
+                $('.'+page_content).show();
+            });
+            $('#aj').click(function(){
+                $('.'+page_content).hide();
+                $('#'+menu).removeClass('active');
+                $(this).addClass('active');
+                page_content = menu = 'aj';
+                $('.'+page_content).show();
+            });
+            init_tabs();
+            function init_tabs() 
+            {
+                if(num_of_devs['aj'] === 0)
+                    $('.aj.content').append( generate_error("No devices found in Alljoyn"));
+                if(num_of_devs['nest'] === 0)
+                    $('.nest.content').append(generate_error("No devices found in Nest"));
+                if(num_of_devs['iotivity'] === 0)
+                    $('.iotivity.content').append(generate_error("No devices found in IoTivity"));
+            }
+            
+            function generate_error(err) {
+                return '<div class="alert alert-danger" role="alert">'+ err +'</div>';
+            }
+        });
+    </script>
+    <script src="js/berryclip.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.simulator {
+    position: fixed;
+    top: 200px;
+    right: 2px;
+    z-index: 100;
+}
+.simulator i {
+    font-size: 2em;
+    cursor: pointer;
+}
+.simulator .add {
+    width: 100px;
+    height: 100px;
+    background: red;
+    
+}
+.simulator .opts li {
+    background-color: yellowgreen;
+    margin: 2px;
+    cursor: pointer;
+}
+.navbar-nav li.active {
+    border-bottom: 2px solid white;
+}

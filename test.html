@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <button id="but">Add</button>
+        </div>
+        <script>
+            $('#but').click(function(){
+                $('.container').append('<p class="p">This is added content</p><div class="simClass"></div>');
+            });
+            $('.container').on("click", ".p", function(){
+                alert('hi');
+            })
+        </script>
+    </body>
+</html>
